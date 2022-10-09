@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ONL_JEE_W_17_Workshop_no_03_by_Griegoriens:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ONL_JEE_W_17_Workshop_no_03_by_Griegoriens</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="jee-user-crud-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ONL_JEE_W_17_Workshop_no_03_by_Griegoriens:war exploded" />
+    </root>
+  </artifact>
+</component>
