@@ -1,5 +1,8 @@
 package pl.coderslab.users;
 
+import entity.User;
+import entity.UserDao;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,5 +16,15 @@ public class UserList extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         getServletContext().getRequestDispatcher("/users/list.jsp")
                 .forward(req, resp);
+
+        UserDao userDao = new UserDao();
+        req.setAttribute("users", userDao.findAll());
+
+        String id = req.getParameter("id");
+        userDao = new UserDao();
+        User read = userDao.read(Integer.parseInt(id));
+        req.setAttribute("user", read);
+
+
     }
 }
